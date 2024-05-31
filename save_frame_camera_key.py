@@ -20,6 +20,8 @@ def save_frame_camera_key(device_num, dir_path, basename, ext='jpg', delay=1, wi
         waitkey() function of Python OpenCV allows users to display
          a window for given milliseconds or until any key is pressed
         """
+        # The ord() function returns the number representing
+        # the unicode code of a specified character.
         if key == ord('c'):
             cv2.imwrite('{}_{}.{}'.format(base_path, n, ext), frame)
             n += 1
