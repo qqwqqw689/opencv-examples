@@ -16,6 +16,10 @@ def save_frame_camera_key(device_num, dir_path, basename, ext='jpg', delay=1, wi
         ret, frame = cap.read()
         cv2.imshow(window_name, frame)
         key = cv2.waitKey(delay) & 0xFF
+        """
+        waitkey() function of Python OpenCV allows users to display
+         a window for given milliseconds or until any key is pressed
+        """
         if key == ord('c'):
             cv2.imwrite('{}_{}.{}'.format(base_path, n, ext), frame)
             n += 1
